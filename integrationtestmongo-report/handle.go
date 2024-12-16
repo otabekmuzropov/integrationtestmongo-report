@@ -51,7 +51,7 @@ func Handler(params *pkg.Params) func(w http.ResponseWriter, r *http.Request) {
 			}
 
 			if err = json.Unmarshal(requestByte, &request); err != nil {
-				handleResponse(w, returnError("error when unmarshl request", err.Error()), http.StatusInternalServerError)
+				handleResponse(w, returnError("error when unmarshal request", err.Error()), http.StatusInternalServerError)
 				return
 			}
 		}
